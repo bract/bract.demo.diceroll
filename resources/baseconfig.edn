@@ -1,0 +1,15 @@
+{;; bract.core config
+ "bract.core.inducers"        [bract.demo.diceroll.init/app-init             ; initialize app
+                               bract.ring.inducer/apply-wrappers-with-config ; apply Ring middleware
+                               bract.core.inducer/config-hook!
+                               bract.core.inducer/invoke-launcher            ; launch app
+                               ]
+ "bract.core.config-hook"     clojure.core/identity          ; no-op
+ "bract.core.launcher"        bract.demo.diceroll.init/start
+ ;; bract.ring config
+ "bract.ring.wrappers.config" [bract.demo.diceroll.web/apply-info-middleware
+                               bract.demo.diceroll.web/apply-wrap-params-middleware]
+ ;; app config
+ "dice.point.char"            "*"
+ "ring.wrap.params.enabled"   true
+ "ring.info.route.enabled"    true}

@@ -1,0 +1,2 @@
+{"parent" "config.edn"
+ "bract.core.config-hook" bract.demo.diceroll.test-init/update-config!}

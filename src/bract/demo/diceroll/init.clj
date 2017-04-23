@@ -27,6 +27,7 @@
   [context]
   (let [handler (config/ctx-ring-handler context)
         config (config/ctx-bract-config context)
-        hk-cfg (config/cfg-http-kit-opts config)]
-    (server/run-server handler hk-cfg))
-  context)
+        hk-cfg (config/cfg-http-kit-opts config)
+        stopper (server/run-server handler hk-cfg)]
+    (assoc context
+      :bract.core/stopper stopper)))

@@ -2,7 +2,7 @@
  "bract.core.inducers" [bract.demo.diceroll.init/app-init             ; initialize app
                         bract.ring.inducer/apply-wrappers-with-config ; apply Ring middleware
                         bract.core.inducer/config-hook!
-                        bract.core.dev/record-deinit!
+                        bract.core.dev/record-context!
                         bract.core.inducer/invoke-launcher            ; launch app
                         ]
  "bract.core.config-hook" bract.demo.diceroll.test-init/update-config!}

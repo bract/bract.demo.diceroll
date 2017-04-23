@@ -24,13 +24,24 @@ Alternatively, you may want to run it as follows in development:
 $ lein do clean, ring server-headless
 ```
 
-### Browsing the app
+
+### Browsing the application
 
 In your web browser you can visit the following URLs:
 
 http://localhost:3000
 http://localhost:3000?char=@
 http://localhost:3000/info
+
+
+### REPL based development
+
+```clojure
+(require 'dev)
+(dev/init)    ; initialize the app (also reload config files)
+(dev/deinit)  ; de-initialize the app
+(dev/reinit)  ; reload modified namespaces and re-initialize the app
+```
 
 
 ## License

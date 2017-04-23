@@ -5,7 +5,7 @@
                                bract.core.inducer/invoke-launcher            ; launch app
                                ]
  "bract.core.config-hook"     clojure.core/identity          ; no-op
- "bract.core.launcher"        bract.demo.diceroll.init/start
+ "bract.core.launcher"        bract.demo.diceroll.init/launch
  ;; bract.ring config
  "bract.ring.wrappers.config" [bract.demo.diceroll.web/apply-info-middleware
                                bract.demo.diceroll.web/apply-wrap-params-middleware]

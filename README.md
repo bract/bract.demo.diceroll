@@ -15,7 +15,7 @@ You can build the app locally and run it as follows:
 
 ```shell
 $ lein do clean, uberjar
-$ java -jar target/uberjar/bract.demo.diceroll-0.1.0-SNAPSHOT-standalone.jar -vf config.edn
+$ java -jar target/uberjar/bract.demo.diceroll-0.1.0-standalone.jar -vf config.edn
 ```
 
 Alternatively, you may want to run it as follows in development:
@@ -41,6 +41,8 @@ http://localhost:3000/info
 (dev/init)    ; initialize the app (also reload config files)
 (dev/deinit)  ; de-initialize the app
 (dev/reinit)  ; reload modified namespaces and re-initialize the app
+(dev/start)   ; launch the web server with initialized app
+(dev/stop)    ; stop the web server
 ```
 
 

@@ -1,10 +1,8 @@
 # TODO and Change Log
 
 
-## [WIP] 0.1.0 / UNRELEASED
-
+## 0.1.0 / 2017-April-25
 ### Added
-
 - Rolling dice
 - Use configured dice point char
 - Ring middleware
@@ -14,3 +12,4 @@
   - Using example input
   - Using external config
 - REPL based development helpers
+

@@ -1,4 +1,4 @@
-(defproject bract/bract.demo.diceroll "0.1.0"
+(defproject bract/bract.demo.diceroll "0.2.0-SNAPSHOT"
   :description "Bract sample Ring webapp to roll a dice"
   :url "https://github.com/bract/bract.demo.diceroll"
   :license {:name "Eclipse Public License"
@@ -23,4 +23,3 @@
   :profiles {:dev {:dependencies [[org.clojure/tools.namespace "0.2.11"]]
                    :source-paths ["dev"]}
              :uberjar {:aot [bract.core.main]}})
-

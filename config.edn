@@ -1,4 +1,4 @@
 {;; inherit config from baseconfig.edn
- "parent" "baseconfig.edn"
+ "parent.config.filenames" "baseconfig.edn"
  ;; web server config
  "http-kit.opts" {:port 3000}}

@@ -3,9 +3,9 @@
 
 ## [WIP] 0.2.0 / 2017-June-??
 ### Changed
-- [TODO] Use bract.core 0.2
-- [TODO] Use bract.cli  0.2
-- [TODO] Use bract.ring 0.2
+- Use bract.core 0.2
+- Use bract.cli  0.2
+- Use bract.ring 0.2
 
 
 ## 0.1.0 / 2017-April-25

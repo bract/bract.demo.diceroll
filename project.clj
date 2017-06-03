@@ -14,13 +14,13 @@
                  ;; web
                  [ring/ring-core "1.5.1"]
                  [http-kit "2.2.0"]]
-  :main ^:skip-aot bract.cli.main
   :target-path "target/%s"
   :plugins [[lein-ring "0.11.0"]]
   :ring {:handler bract.ring.dev/handler
          :init    bract.ring.dev/init!
          :port    3000
          :nrepl   {:start? true :port 3001}}
-  :profiles {:dev {:dependencies [[org.clojure/tools.namespace "0.2.11"]]
+  :profiles {:dev {:dependencies [[bract/bract.dev "0.2.0-SNAPSHOT"]]
                    :source-paths ["dev"]}
-             :uberjar {:aot [bract.cli.main]}})
+             :uberjar {:aot [bract.cli.main]
+                       :main ^:skip-aot bract.cli.main}})

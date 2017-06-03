@@ -6,6 +6,7 @@
 - Use bract.core 0.2
 - Use bract.cli  0.2
 - Use bract.ring 0.2
+- Use bract.dev  0.2 for REPL-based dev workflow
 
 
 ## 0.1.0 / 2017-April-25

@@ -32,7 +32,10 @@
   (bract-echo/with-latency-capture "Re-initializing app"
     (bract-dev/deinit)
     ;; refresh namespace and then call 'init'
-    (ctnr/refresh :after 'dev/init)))
+    (let [retval (ctnr/refresh :after 'dev/init)]
+      (if (instance? Throwable retval)
+        (throw retval)
+        retval))))
 
 
 (defn start

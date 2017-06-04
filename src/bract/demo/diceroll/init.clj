@@ -10,6 +10,7 @@
 (ns bract.demo.diceroll.init
   (:require
     [org.httpkit.server         :as server]
+    [bract.core.echo            :as echo]
     [bract.demo.diceroll.config :as config]
     [bract.demo.diceroll.web    :as web]))
 
@@ -29,5 +30,6 @@
         config (config/ctx-bract-config context)
         hk-cfg (config/cfg-http-kit-opts config)
         stopper (server/run-server handler hk-cfg)]
+    (echo/echo "Started HTTP-Kit server using options:" hk-cfg)
     (assoc context
       :bract.core/stopper stopper)))

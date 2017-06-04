@@ -15,7 +15,7 @@ You can build the app locally and run it as follows:
 
 ```shell
 $ lein do clean, uberjar
-$ java -jar target/uberjar/bract.demo.diceroll-0.1.0-standalone.jar -vf config.edn
+$ java -jar target/uberjar/bract.demo.diceroll-0.2.0-standalone.jar -vf config.edn
 ```
 
 Alternatively, you may want to run it as follows in development:
@@ -36,13 +36,15 @@ http://localhost:3000/info
 
 ### REPL based development
 
+The `dev/user.clj` file is loaded when you run `lein repl` where the following may be helpful:
+
 ```clojure
-(require 'dev)
-(dev/init)    ; initialize the app (also reload config files)
-(dev/deinit)  ; de-initialize the app
-(dev/reinit)  ; reload modified namespaces and re-initialize the app
-(dev/start)   ; launch the web server with initialized app
-(dev/stop)    ; stop the web server
+(go)       ; stop app if running, then reload namespaces and reinit
+(reset)    ; same as (go)
+(start)    ; start the application
+(stop)     ; stop app if running, leaving it still initialized
+(restart)  ; stop app if running, reload namespaces, reinitialize and start up
+(verbose true) ; enable verbose mode
 ```
 
 

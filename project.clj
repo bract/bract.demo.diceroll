@@ -1,4 +1,4 @@
-(defproject bract/bract.demo.diceroll "0.2.0-SNAPSHOT"
+(defproject bract/bract.demo.diceroll "0.2.0"
   :description "Bract sample Ring webapp to roll a dice"
   :url "https://github.com/bract/bract.demo.diceroll"
   :license {:name "Eclipse Public License"

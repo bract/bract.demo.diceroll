@@ -1,7 +1,7 @@
 # TODO and Change Log
 
 
-## [WIP] 0.2.0 / 2017-June-??
+## 0.2.0 / 2017-June-04
 ### Changed
 - Use bract.core 0.2
 - Use bract.cli  0.2

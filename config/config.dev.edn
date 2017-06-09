@@ -1,4 +1,4 @@
-{"parent.config.filenames" "config.edn"
+{"parent.config.filenames" "config/config.edn"
  "bract.core.inducers" [bract.demo.diceroll.init/app-init             ; initialize app
                         bract.ring.inducer/cfg-apply-wrappers         ; apply Ring middleware
                         bract.core.inducer/config-hook

@@ -9,8 +9,8 @@
   :min-lein-version "2.7.1"
   :pedantic? :abort
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [bract/bract.cli  "0.2.0"]
-                 [bract/bract.ring "0.2.0"]
+                 [bract/bract.cli  "0.3.0-SNAPSHOT"]
+                 [bract/bract.ring "0.3.0-SNAPSHOT"]
                  ;; web
                  [ring/ring-core "1.5.1"]
                  [http-kit "2.2.0"]]
@@ -20,7 +20,7 @@
          :init    bract.ring.dev/init!
          :port    3000
          :nrepl   {:start? true :port 3001}}
-  :profiles {:dev {:dependencies [[bract/bract.dev "0.2.0"]]
+  :profiles {:dev {:dependencies [[bract/bract.dev "0.3.0-SNAPSHOT"]]
                    :source-paths ["dev"]}
              :uberjar {:aot [bract.cli.main]
                        :main ^:skip-aot bract.cli.main}})

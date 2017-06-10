@@ -1,10 +1,4 @@
 {"parent.config.filenames" "config/config.edn"
- "bract.core.inducers" [bract.demo.diceroll.init/app-init             ; initialize app
-                        (bract.ring.inducer/apply-wrappers            ; apply Ring middleware
-                          [bract.demo.diceroll.web/apply-info-middleware
-                           bract.demo.diceroll.web/apply-wrap-params-middleware])
-                        (bract.core.inducer/config-hook               ; record the config
-                          bract.demo.diceroll.test-init/update-config!)
-                        bract.core.dev/record-context!
-                        bract.core.inducer/invoke-launcher            ; launch app
-                        ]}
+ "dev-inducers"            [(bract.core.inducer/config-hook               ; record the config
+                              bract.demo.diceroll.test-init/update-config!)
+                            bract.core.dev/record-context!]}

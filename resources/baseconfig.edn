@@ -3,8 +3,11 @@
                                (bract.ring.inducer/apply-wrappers            ; apply Ring middleware
                                  [bract.demo.diceroll.web/apply-info-middleware
                                   bract.demo.diceroll.web/apply-wrap-params-middleware])
+                               (bract.core.inducer/run-config-inducers
+                                 "dev-inducers")
                                bract.core.inducer/invoke-launcher            ; launch app
                                ]
+ "dev-inducers"               []  ; no-op for production
  "bract.core.launcher"        bract.demo.diceroll.init/launch
  ;; app config
  "dice.point.char"            "*"

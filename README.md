@@ -45,6 +45,7 @@ The `dev/user.clj` file is loaded when you run `lein repl` where the following m
 (stop)     ; stop app if running, leaving it still initialized
 (restart)  ; stop app if running, reload namespaces, reinitialize and start up
 (verbose true) ; enable verbose mode
+(config "config/config.qa.edn") ; switch config file
 ```
 
 

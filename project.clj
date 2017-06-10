@@ -12,7 +12,7 @@
                  [bract/bract.cli  "0.3.0-SNAPSHOT"]
                  [bract/bract.ring "0.3.0-SNAPSHOT"]
                  ;; web
-                 [ring/ring-core "1.5.1"]
+                 [ring/ring-core "1.6.1"]
                  [http-kit "2.2.0"]]
   :target-path "target/%s"
   :plugins [[lein-ring "0.12.0"]]

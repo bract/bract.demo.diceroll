@@ -9,8 +9,8 @@
   :min-lein-version "2.7.1"
   :pedantic? :abort
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [bract/bract.cli  "0.3.0"]
-                 [bract/bract.ring "0.3.0"]
+                 [bract/bract.cli     "0.3.0"]
+                 [bract/bract.ring    "0.3.0"]
                  ;; web
                  [ring/ring-core "1.6.1"]
                  [http-kit "2.2.0"]]

@@ -1,4 +1,13 @@
-# TODO and Change Log
+# diceroll TODO and Change Log
+
+
+## [WIP] 0.3.0 / 2017-June-??
+### Changed
+- Use bract.core 0.3
+- Use bract.cli  0.3
+- Use bract.ring 0.3
+- Use bract.dev  0.3
+- Use parameterized inducer to avoid inducer config duplication
 
 
 ## 0.2.0 / 2017-June-04

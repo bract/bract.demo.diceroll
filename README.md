@@ -15,7 +15,7 @@ You can build the app locally and run it as follows:
 
 ```shell
 $ lein do clean, uberjar
-$ java -jar target/uberjar/bract.demo.diceroll-0.2.0-standalone.jar -vf config.edn
+$ java -jar target/uberjar/bract.demo.diceroll-0.3.0-SNAPSHOT-standalone.jar -vf config.edn
 ```
 
 Alternatively, you may want to run it as follows in development:
@@ -45,6 +45,7 @@ The `dev/user.clj` file is loaded when you run `lein repl` where the following m
 (stop)     ; stop app if running, leaving it still initialized
 (restart)  ; stop app if running, reload namespaces, reinitialize and start up
 (verbose true) ; enable verbose mode
+(config "config/config.qa.edn") ; switch config file
 ```
 
 

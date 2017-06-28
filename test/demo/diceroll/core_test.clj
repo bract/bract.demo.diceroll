@@ -7,13 +7,13 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.core-test
+(ns demo.diceroll.core-test
   (:require
     [clojure.test :refer :all]
     [clojure.string           :as string]
     [bract.core.echo :as echo]
-    [bract.demo.diceroll.core :as core]
-    [bract.demo.diceroll.test-init :as ti])
+    [demo.diceroll.core :as core]
+    [demo.diceroll.test-init :as ti])
   (:import
     [java.util.regex Pattern]))
 

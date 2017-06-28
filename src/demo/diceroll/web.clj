@@ -7,13 +7,13 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.web
+(ns demo.diceroll.web
   (:require
     [clojure.pprint :as pp]
-    [ring.middleware.params     :as rmp]
-    [bract.core.config          :as core-config]
-    [bract.demo.diceroll.config :as config]
-    [bract.demo.diceroll.core   :as core]))
+    [ring.middleware.params :as rmp]
+    [bract.core.config      :as core-config]
+    [demo.diceroll.config   :as config]
+    [demo.diceroll.core     :as core]))
 
 
 (defn roll-dice

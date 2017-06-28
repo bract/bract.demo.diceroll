@@ -7,7 +7,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.config
+(ns demo.diceroll.config
   (:require
     [keypin.core :as keypin]
     [keypin.util :as kputil]))

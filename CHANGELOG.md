@@ -2,7 +2,7 @@
 
 
 ## [WIP] 0.3.1 / 2017-June-??
-- [TODO] Use Bract 0.3.1 components
+- Use Bract 0.3.1 components
 - Rename project to `demo.diceroll`
 
 

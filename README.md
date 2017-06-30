@@ -29,9 +29,9 @@ $ lein do clean, ring server-headless
 
 In your web browser you can visit the following URLs:
 
-http://localhost:3000
-http://localhost:3000?char=@
-http://localhost:3000/info
+- http://localhost:3000
+- http://localhost:3000?char=@
+- http://localhost:3000/info
 
 
 ### REPL based development

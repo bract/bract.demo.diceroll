@@ -7,7 +7,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.test-init
+(ns demo.diceroll.test-init
   (:require
     [bract.ring.dev :as ring-dev]))
 

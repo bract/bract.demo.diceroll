@@ -7,12 +7,12 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.init
+(ns demo.diceroll.init
   (:require
-    [org.httpkit.server         :as server]
-    [bract.core.echo            :as echo]
-    [bract.demo.diceroll.config :as config]
-    [bract.demo.diceroll.web    :as web]))
+    [org.httpkit.server   :as server]
+    [bract.core.echo      :as echo]
+    [demo.diceroll.config :as config]
+    [demo.diceroll.web    :as web]))
 
 
 (defn app-init

@@ -7,7 +7,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 
-(ns bract.demo.diceroll.core
+(ns demo.diceroll.core
   (:require
     [clojure.string :as string]))
 

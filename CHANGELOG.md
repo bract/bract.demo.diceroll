@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.3.1 / 2017-June-??
+## 0.3.1 / 2017-June-30
 - Use Bract 0.3.1 components
 - Rename project to `demo.diceroll`
 

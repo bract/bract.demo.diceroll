@@ -3,9 +3,8 @@
 
 ## [WIP] 0.4.0 / 2017-July-??
 
-- [TODO] Use Bract 0.4.0
+- Use Bract 0.4.0
   - [TODO] Use the GA version of Bract 0.4.0
-- [TODO] Implement `version` CLI command
 
 
 ## 0.3.1 / 2017-June-30

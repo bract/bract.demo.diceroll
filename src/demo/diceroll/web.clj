@@ -11,7 +11,7 @@
   (:require
     [clojure.pprint :as pp]
     [ring.middleware.params :as rmp]
-    [bract.core.config      :as core-config]
+    [bract.core.keydef      :as core-kdef]
     [demo.diceroll.config   :as config]
     [demo.diceroll.core     :as core]))
 
@@ -51,7 +51,7 @@
 
 (defn apply-info-middleware
   [handler context]
-  (let [config (core-config/ctx-config context)]
+  (let [config (core-kdef/ctx-config context)]
     (if (config/cfg-info-enabled? config)
       (info-middleware handler)
       handler)))
@@ -59,7 +59,7 @@
 
 (defn apply-wrap-params-middleware
   [handler context]
-  (let [config (core-config/ctx-config context)]
+  (let [config (core-kdef/ctx-config context)]
     (if (config/cfg-wrap-params? config)
       (rmp/wrap-params handler)
       handler)))

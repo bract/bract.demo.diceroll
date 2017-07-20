@@ -12,7 +12,7 @@
     [clojure.pprint :as pp]
     [ring.middleware.params :as rmp]
     [bract.core.keydef      :as core-kdef]
-    [demo.diceroll.config   :as config]
+    [demo.diceroll.keydef   :as kdef]
     [demo.diceroll.core     :as core]))
 
 
@@ -27,7 +27,7 @@
 
 (defn make-ring-handler
   [config]
-  (let [dice-char (config/cfg-dice-char config)]
+  (let [dice-char (kdef/cfg-dice-char config)]
     (fn [request]
       (roll-dice dice-char request))))
 
@@ -52,7 +52,7 @@
 (defn apply-info-middleware
   [handler context]
   (let [config (core-kdef/ctx-config context)]
-    (if (config/cfg-info-enabled? config)
+    (if (kdef/cfg-info-enabled? config)
       (info-middleware handler)
       handler)))
 
@@ -60,6 +60,6 @@
 (defn apply-wrap-params-middleware
   [handler context]
   (let [config (core-kdef/ctx-config context)]
-    (if (config/cfg-wrap-params? config)
+    (if (kdef/cfg-wrap-params? config)
       (rmp/wrap-params handler)
       handler)))

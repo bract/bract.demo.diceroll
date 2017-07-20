@@ -11,24 +11,24 @@
   (:require
     [org.httpkit.server   :as server]
     [bract.core.echo      :as echo]
-    [demo.diceroll.config :as config]
+    [demo.diceroll.keydef :as kdef]
     [demo.diceroll.web    :as web]))
 
 
 (defn app-init
   "Initialize application and return context with Ring handler."
   [context]
-  (->> (config/ctx-bract-config context)
+  (->> (kdef/ctx-bract-config context)
     web/make-ring-handler
-    (assoc context (key config/ctx-ring-handler))))
+    (assoc context (key kdef/ctx-ring-handler))))
 
 
 (defn launch
   "Launch server using HTTP-Kit."
   [context]
-  (let [handler (config/ctx-ring-handler context)
-        config (config/ctx-bract-config context)
-        hk-cfg (config/cfg-http-kit-opts config)
+  (let [handler (kdef/ctx-ring-handler context)
+        config  (kdef/ctx-bract-config context)
+        hk-cfg  (kdef/cfg-http-kit-opts config)
         stopper (server/run-server handler hk-cfg)]
     (echo/echo "Started HTTP-Kit server using options:" hk-cfg)
     (assoc context

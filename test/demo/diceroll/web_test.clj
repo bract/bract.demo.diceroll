@@ -12,7 +12,7 @@
     [clojure.string :as string]
     [clojure.test :refer :all]
     [bract.ring.dev :as ring-dev]
-    [demo.diceroll.config    :as config]
+    [demo.diceroll.keydef    :as kdef]
     [demo.diceroll.core      :as core]
     [demo.diceroll.web       :as web]
     [demo.diceroll.test-init :as ti])
@@ -27,7 +27,7 @@
 
 (deftest test-default
   (let [config-set (->> rolled-set
-                     (map #(string/replace % (re-pattern (Pattern/quote "X")) (config/cfg-dice-char ti/config)))
+                     (map #(string/replace % (re-pattern (Pattern/quote "X")) (kdef/cfg-dice-char ti/config)))
                      set)
         params-set (->> rolled-set
                      (map #(string/replace % (re-pattern (Pattern/quote "X")) "@"))

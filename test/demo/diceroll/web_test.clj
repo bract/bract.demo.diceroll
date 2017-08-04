@@ -11,7 +11,9 @@
   (:require
     [clojure.string :as string]
     [clojure.test :refer :all]
-    [bract.ring.dev :as ring-dev]
+    [bract.core.dev          :as bc-dev]
+    [bract.core.keydef       :as bc-kdef]
+    [bract.ring.keydef       :as br-kdef]
     [demo.diceroll.keydef    :as kdef]
     [demo.diceroll.core      :as core]
     [demo.diceroll.web       :as web]
@@ -26,15 +28,18 @@
 
 
 (deftest test-default
-  (let [config-set (->> rolled-set
-                     (map #(string/replace % (re-pattern (Pattern/quote "X")) (kdef/cfg-dice-char ti/config)))
+  (let [;; initialized context is at bract.core.dev/app-context
+        config     (bc-kdef/ctx-config       bc-dev/app-context)  ; get initialized config
+        handler    (br-kdef/ctx-ring-handler bc-dev/app-context)  ; get initialized Ring handler
+        config-set (->> rolled-set
+                     (map #(string/replace % (re-pattern (Pattern/quote "X")) (kdef/cfg-dice-char config)))
                      set)
         params-set (->> rolled-set
                      (map #(string/replace % (re-pattern (Pattern/quote "X")) "@"))
                      set)]
-    (let [response (ring-dev/handler {})]
+    (let [response (handler {})]
       (is (= 200 (:status response)))
       (is (contains? config-set (:body response))))
-    (let [response (ring-dev/handler {:query-params {"char" "@"}})]
+    (let [response (handler {:query-params {"char" "@"}})]
       (is (= 200 (:status response)))
       (is (contains? params-set (:body response))))))

@@ -9,15 +9,15 @@
 
 (ns demo.diceroll.web-test
   (:require
-    [clojure.string :as string]
     [clojure.test :refer :all]
-    [bract.core.dev          :as bc-dev]
-    [bract.core.keydef       :as bc-kdef]
-    [bract.ring.keydef       :as br-kdef]
-    [demo.diceroll.keydef    :as kdef]
-    [demo.diceroll.core      :as core]
-    [demo.diceroll.web       :as web]
-    [demo.diceroll.test-init :as ti])
+    [clojure.string       :as string]
+    [bract.core.dev       :as bc-dev]
+    [bract.core.keydef    :as bc-kdef]
+    [bract.ring.keydef    :as br-kdef]
+    [demo.diceroll.keydef :as kdef]
+    [demo.diceroll.core   :as core]
+    [demo.diceroll.web    :as web]
+    [demo.diceroll.test-init])
   (:import
     [java.util.regex Pattern]))
 

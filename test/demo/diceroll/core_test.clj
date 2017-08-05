@@ -10,10 +10,9 @@
 (ns demo.diceroll.core-test
   (:require
     [clojure.test :refer :all]
-    [clojure.string           :as string]
-    [bract.core.echo :as echo]
+    [clojure.string     :as string]
     [demo.diceroll.core :as core]
-    [demo.diceroll.test-init :as ti])
+    [demo.diceroll.test-init])
   (:import
     [java.util.regex Pattern]))
 

@@ -9,15 +9,7 @@
 
 (ns demo.diceroll.test-init
   (:require
-    [bract.ring.dev :as ring-dev]))
+    [bract.core.dev :as bc-dev]))
 
 
-(defonce config nil)
-
-
-(defn update-config!
-  [app-config]
-  (alter-var-root #'config (fn [_] app-config)))
-
-
-(ring-dev/init-once!)
+(bc-dev/ensure-init)

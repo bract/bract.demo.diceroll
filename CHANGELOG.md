@@ -4,7 +4,7 @@
 ## [TODO] 0.4.1 / 2017-August-??
 
 - Use Bract 0.4.1
-- [TODO] Add `resources/baseconfig.edn` to estalish a base application config
+- Add more common config to `resources/baseconfig.edn`
   - Config files `config/config.edn` and `config/config.dev.edn` derive from it
 
 

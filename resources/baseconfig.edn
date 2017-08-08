@@ -12,4 +12,6 @@
  ;; app config
  "dice.point.char"            "*"
  "ring.wrap.params.enabled"   true
- "ring.info.route.enabled"    true}
+ "ring.info.route.enabled"    true
+ ;; web server config
+ "http-kit.opts" {:port 3000}}

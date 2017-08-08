@@ -1,6 +1,13 @@
 # demo.diceroll Change Log
 
 
+## [TODO] 0.4.1 / 2017-August-??
+
+- [TODO] Use Bract 0.4.1
+- [TODO] Add `resources/baseconfig.edn` to estalish a base application config
+  - Config files `config/config.edn` and `config/config.dev.edn` derive from it
+
+
 ## 0.4.0 / 2017-August-05
 
 - Use Bract 0.4.0

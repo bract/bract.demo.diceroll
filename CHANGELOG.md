@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [TODO] 0.4.1 / 2017-August-??
+## 0.4.1 / 2017-August-08
 
 - Use Bract 0.4.1
 - Add more common config to `resources/baseconfig.edn`

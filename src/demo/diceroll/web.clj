@@ -30,3 +30,14 @@
   (let [dice-char (kdef/cfg-dice-char config)]
     (fn [request]
       (roll-dice dice-char request))))
+
+
+(defn config-dump-wrapper
+  [handler context]
+  (let [config (core-kdef/ctx-config context)]
+    (fn [request]
+      (if (contains? #{"/config" "/config/"} (:uri request))
+        {:status 200
+         :headers {"Content-Type" "application/edn"}
+         :body (pr-str config)}
+        (handler request)))))

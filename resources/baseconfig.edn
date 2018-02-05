@@ -1,8 +1,10 @@
 {"parent.config.filenames"    ["bract/ring/default.edn"]
  ;; bract.core config
  "bract.core.inducers"        [demo.diceroll.init/app-init                   ; initialize app
-                               (bract.ring.inducer/apply-wrappers            ; apply wrappers from bract.ring
+                               (bract.ring.inducer/apply-wrappers            ; apply Ring wrappers from bract.ring
                                  $bract.ring.wrappers)
+                               (bract.ring.inducer/apply-wrappers            ; apply Ring wrappers from application
+                                 [demo.diceroll.web/config-dump-wrapper])
                                (bract.ring.inducer/apply-middlewares         ; apply Ring middleware
                                  [ring.middleware.params/wrap-params])
                                (bract.core.inducer/run-config-inducers       ; dev-mode inducers

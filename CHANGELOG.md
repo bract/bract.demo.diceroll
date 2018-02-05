@@ -6,6 +6,8 @@
 - Use Bract 0.5.0
 - Use Clojure 1.9.0
 - Upgrade ring-core to 1.6.3 (and lein-ring 0.12.3)
+- Switch from own Ring wrappers to those from bract.ring
+- Add `/config` endpoint via Ring wrapper to dump config
 
 
 ## 0.4.1 / 2017-August-08

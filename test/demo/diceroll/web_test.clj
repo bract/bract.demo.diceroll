@@ -37,9 +37,10 @@
         params-set (->> rolled-set
                      (map #(string/replace % (re-pattern (Pattern/quote "X")) "@"))
                      set)]
-    (let [response (handler {})]
+    (let [response (handler {:uri "/"})]
       (is (= 200 (:status response)))
       (is (contains? config-set (:body response))))
-    (let [response (handler {:query-params {"char" "@"}})]
+    (let [response (handler {:uri "/"
+                             :query-params {"char" "@"}})]
       (is (= 200 (:status response)))
       (is (contains? params-set (:body response))))))

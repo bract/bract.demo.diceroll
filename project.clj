@@ -7,6 +7,7 @@
                 *assert* true
                 *unchecked-math* :warn-on-boxed}
   :min-lein-version "2.7.1"
+  :pedantic?    :warn
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [bract/bract.cli     "0.5.0-SNAPSHOT"]
                  [bract/bract.ring    "0.5.0-SNAPSHOT"]

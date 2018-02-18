@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.5.0 / 2018-February-??
+## 0.5.0 / 2018-February-18
 
 - Use Bract 0.5.0
 - Use Clojure 1.9.0

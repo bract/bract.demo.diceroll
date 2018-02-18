@@ -1,2 +1,2 @@
 {;; inherit config from baseconfig.edn
- "parent.config.filenames" "baseconfig.edn"}
+ "parent.filenames" ["baseconfig.edn"]}

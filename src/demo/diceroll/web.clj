@@ -32,34 +32,12 @@
       (roll-dice dice-char request))))
 
 
-(defn info-middleware
-  [handler]
-  (fn [request]
-    (let [^String uri (:uri request)]
-      (if (#{"/info" "/info/"} uri)
+(defn config-dump-wrapper
+  [handler context]
+  (let [config (core-kdef/ctx-config context)]
+    (fn [request]
+      (if (contains? #{"/config" "/config/"} (:uri request))
         {:status 200
-         :headers {"Content-type" "text/plain"}
-         :body (let [^Runtime rt (Runtime/getRuntime)
-                     mbytes (fn [^long n] (str (int (/ n (* 1024 1024))) " MBytes"))]
-                 (with-out-str
-                   (pp/pprint {:available-processors (.availableProcessors rt)
-                               :free-memory  (mbytes (.freeMemory  rt))
-                               :total-memory (mbytes (.totalMemory rt))
-                               :max-memory   (mbytes (.maxMemory   rt))})))}
+         :headers {"Content-Type" "application/edn"}
+         :body (pr-str config)}
         (handler request)))))
-
-
-(defn apply-info-middleware
-  [handler context]
-  (let [config (core-kdef/ctx-config context)]
-    (if (kdef/cfg-info-enabled? config)
-      (info-middleware handler)
-      handler)))
-
-
-(defn apply-wrap-params-middleware
-  [handler context]
-  (let [config (core-kdef/ctx-config context)]
-    (if (kdef/cfg-wrap-params? config)
-      (rmp/wrap-params handler)
-      handler)))

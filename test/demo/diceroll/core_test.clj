@@ -12,7 +12,7 @@
     [clojure.test :refer :all]
     [clojure.string     :as string]
     [demo.diceroll.core :as core]
-    [demo.diceroll.test-init])
+    [bract.core.dev-init])
   (:import
     [java.util.regex Pattern]))
 

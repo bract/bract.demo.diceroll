@@ -5,6 +5,7 @@
 
 - Use Bract 0.5.1
   - [TODO] Use the GA version
+- Use `bract.core.dev-init` to initialize test namespaces
 
 
 ## 0.5.0 / 2018-February-18

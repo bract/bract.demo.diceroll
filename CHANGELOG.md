@@ -3,7 +3,8 @@
 
 ## [WIP] 0.5.1 / 2018-February-??
 
-- [TODO] Use Bract 0.5.1
+- Use Bract 0.5.1
+  - [TODO] Use the GA version
 
 
 ## 0.5.0 / 2018-February-18

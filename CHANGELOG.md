@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.5.1 / 2018-March-??
+## 0.5.1 / 2018-March-05
 
 - Use Bract 0.5.1
 - Use `bract.core.dev-init` to initialize test namespaces

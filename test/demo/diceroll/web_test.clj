@@ -17,7 +17,7 @@
     [demo.diceroll.keydef :as kdef]
     [demo.diceroll.core   :as core]
     [demo.diceroll.web    :as web]
-    [demo.diceroll.test-init])
+    [bract.core.dev-init])
   (:import
     [java.util.regex Pattern]))
 

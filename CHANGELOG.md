@@ -1,6 +1,11 @@
 # demo.diceroll Change Log
 
 
+## [WIP] 0.6.0 / 2018-March-??
+
+- [Todo] Use Bract 0.6.0
+
+
 ## 0.5.1 / 2018-March-05
 
 - Use Bract 0.5.1

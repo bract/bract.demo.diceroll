@@ -1,0 +1,4 @@
+{"parent.filenames" ["bract-context.edn"
+                     "bract/core/context.dev.edn"
+                     "bract/cli/context.dev.edn"
+                     "bract/ring/context.dev.edn"]}

@@ -1,0 +1,15 @@
+{"parent.filenames"   ["bract/core/context.edn"
+                       "bract/cli/context.edn"
+                       "bract/ring/context.edn"]
+ :bract.core/inducers [(bract.core.inducer/run-context-inducers  ; defined in bract.cli
+                         :app/cfg-inducers)
+                       demo.diceroll.init/app-init               ; initialize app
+                       (bract.ring.inducer/apply-wrappers        ; apply Ring wrappers from bract.ring
+                         $:bract.ring/wrappers)
+                       (bract.ring.inducer/apply-wrappers        ; apply Ring wrappers from application
+                         [demo.diceroll.web/config-dump-wrapper])
+                       (bract.ring.inducer/apply-middlewares     ; apply Ring middleware
+                         [ring.middleware.params/wrap-params])
+                       (bract.core.inducer/run-context-inducers  ; defined in bract.core
+                         :app/dev-inducers)]
+ :bract.core/launcher demo.diceroll.init/launch}

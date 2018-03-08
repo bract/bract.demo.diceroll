@@ -1,4 +1,7 @@
-{"parent.filenames" ["bract-context.edn"
-                     "bract/core/context.dev.edn"
-                     "bract/cli/context.dev.edn"
-                     "bract/ring/context.dev.edn"]}
+{;;
+ ;; demo.diceroll dev context
+ ;;
+ "parent.filenames" ["bract-context.edn"]
+ :app/cli-inducers  [bract.core.inducer/read-config]
+ :app/dev-inducers  [;; record the context for dev workflow
+                     bract.core.dev/record-context!]}

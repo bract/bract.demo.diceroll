@@ -1,8 +1,9 @@
-{"parent.filenames"   ["bract/core/context.edn"
-                       "bract/cli/context.edn"
-                       "bract/ring/context.edn"]
- :bract.core/inducers [(bract.core.inducer/run-context-inducers  ; defined in bract.cli
-                         :app/cfg-inducers)
+{;;
+ ;; demo.diceroll app context
+ ;;
+ "parent.filenames"   ["bract/ring/context.edn"]
+ :bract.core/inducers [(bract.core.inducer/run-context-inducers
+                         :app/cli-inducers)
                        demo.diceroll.init/app-init               ; initialize app
                        (bract.ring.inducer/apply-wrappers        ; apply Ring wrappers from bract.ring
                          $:bract.ring/wrappers)
@@ -12,4 +13,9 @@
                          [ring.middleware.params/wrap-params])
                        (bract.core.inducer/run-context-inducers  ; defined in bract.core
                          :app/dev-inducers)]
+ :app/cli-inducers    [bract.cli.inducer/parse-args
+                       bract.core.inducer/read-config
+                       bract.core.inducer/set-verbosity
+                       bract.cli.inducer/execute-command]
+ :app/dev-inducers    []
  :bract.core/launcher demo.diceroll.init/launch}

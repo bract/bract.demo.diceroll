@@ -20,4 +20,9 @@
                        bract.core.inducer/set-verbosity
                        bract.cli.inducer/execute-command]
  :app/dev-inducers    []
- :bract.core/launcher demo.diceroll.init/launch}
+ :bract.core/launcher       bract.ring.inducer/start-server
+ ;;:bract.ring/server-starter bract.ring.server/start-aleph-server
+ :bract.ring/server-starter bract.ring.server/start-http-kit-server
+ ;;:bract.ring/server-starter bract.ring.server/start-immutant-server
+ ;;:bract.ring/server-starter bract.ring.server/start-jetty-server
+ }

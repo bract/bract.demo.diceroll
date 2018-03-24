@@ -21,15 +21,3 @@
   (->> (kdef/ctx-bract-config context)
     web/make-ring-handler
     (assoc context (key kdef/ctx-ring-handler))))
-
-
-(defn launch
-  "Launch server using HTTP-Kit."
-  [context]
-  (let [handler (kdef/ctx-ring-handler context)
-        config  (kdef/ctx-bract-config context)
-        hk-cfg  (kdef/cfg-http-kit-opts config)
-        stopper (server/run-server handler hk-cfg)]
-    (echo/echo "Started HTTP-Kit server using options:" hk-cfg)
-    (assoc context
-      :bract.core/stopper stopper)))

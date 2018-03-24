@@ -11,9 +11,13 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [bract/bract.cli     "0.6.0-alpha3"]
                  [bract/bract.ring    "0.6.0-alpha3"]
+                 ;; web servers (uncomment any one)
+                 ;;[aleph                   "0.4.4" :exclusions [org.clojure/tools.logging]]
+                 [http-kit                "2.3.0-beta2"]
+                 ;;[org.immutant/immutant   "2.1.10"]
+                 ;;[ring/ring-jetty-adapter "1.6.3"]
                  ;; web
-                 [ring/ring-core "1.6.3"]
-                 [http-kit "2.3.0-beta2"]]
+                 [ring/ring-core "1.6.3"]]
   :target-path "target/%s"
   :plugins [[lein-ring "0.12.3"]]
   :ring {:handler bract.ring.dev/handler

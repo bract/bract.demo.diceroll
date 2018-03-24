@@ -9,6 +9,7 @@
   - Define context entries in `bract-context.edn` and `bract-context.dev.edn`
   - Remove inducer and launcher entries from `baseconfig.edn` and config files
   - Upgrade HTTP Kit to `2.3.0-beta2`
+  - Use `bract.ring.inducer/start-server` to launch web server
   - Require config, falling back to included `baseconfig.edn` if config file is unspecified
 
 

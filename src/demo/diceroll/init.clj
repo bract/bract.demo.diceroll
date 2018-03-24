@@ -9,8 +9,6 @@
 
 (ns demo.diceroll.init
   (:require
-    [org.httpkit.server   :as server]
-    [bract.core.echo      :as echo]
     [demo.diceroll.keydef :as kdef]
     [demo.diceroll.web    :as web]))
 

@@ -13,7 +13,7 @@
                  [bract/bract.ring    "0.6.0-alpha3"]
                  ;; web
                  [ring/ring-core "1.6.3"]
-                 [http-kit "2.2.0"]]
+                 [http-kit "2.3.0-beta2"]]
   :target-path "target/%s"
   :plugins [[lein-ring "0.12.3"]]
   :ring {:handler bract.ring.dev/handler

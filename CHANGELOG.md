@@ -9,6 +9,7 @@
   - Define context entries in `bract-context.edn` and `bract-context.dev.edn`
   - Remove inducer and launcher entries from `baseconfig.edn` and config files
   - Upgrade HTTP Kit to `2.3.0-beta2`
+  - Require config, falling back to included `baseconfig.edn` if config file is unspecified
 
 
 ## 0.5.1 / 2018-March-05

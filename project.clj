@@ -9,11 +9,11 @@
   :min-lein-version "2.7.1"
   :pedantic?    :warn
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [bract/bract.cli     "0.6.0-beta1"]
-                 [bract/bract.ring    "0.6.0-beta1"]
+                 [bract/bract.cli     "0.6.0-beta2"]
+                 [bract/bract.ring    "0.6.0-beta2"]
                  ;; web servers (uncomment any one)
                  ;;[aleph                   "0.4.4" :exclusions [org.clojure/tools.logging]]
-                 [http-kit                "2.3.0-beta2"]
+                 [http-kit                "2.3.0"]
                  ;;[org.immutant/immutant   "2.1.10"]
                  ;;[ring/ring-jetty-adapter "1.6.3"]
                  ;; web
@@ -24,7 +24,7 @@
          :init    bract.ring.dev/init!
          :port    3000
          :nrepl   {:start? true :port 3001}}
-  :profiles {:dev {:dependencies [[bract/bract.dev "0.6.0-beta1"]]
+  :profiles {:dev {:dependencies [[bract/bract.dev "0.6.0-beta2"]]
                    :source-paths ["dev"]}
              :uberjar {:aot [bract.core.main]
                        :main ^:skip-aot bract.core.main

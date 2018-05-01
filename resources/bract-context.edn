@@ -20,7 +20,7 @@
                        bract.core.inducer/set-verbosity
                        bract.cli.inducer/execute-command]
  :app/dev-inducers    []
- :bract.core/launcher       bract.ring.inducer/start-server
+ :bract.core/launchers      [bract.ring.inducer/start-server]
  ;;:bract.ring/server-starter bract.ring.server/start-aleph-server
  :bract.ring/server-starter bract.ring.server/start-http-kit-server
  ;;:bract.ring/server-starter bract.ring.server/start-immutant-server

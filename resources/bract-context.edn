@@ -1,0 +1,28 @@
+{;;
+ ;; demo.diceroll app context
+ ;;
+ "parent.filenames"   ["bract/ring/context.edn"]
+ :bract.cli/config-required? true                ; require config for the application
+ :bract.core/config-files    ["baseconfig.edn"]  ; fall back to baseconfig.edn (in classpath) for config
+ :bract.core/inducers [(bract.core.inducer/run-context-inducers
+                         :app/cli-inducers)
+                       demo.diceroll.init/app-init               ; initialize app
+                       (bract.ring.inducer/apply-wrappers        ; apply Ring wrappers from bract.ring
+                         $:bract.ring/wrappers)
+                       (bract.ring.inducer/apply-wrappers        ; apply Ring wrappers from application
+                         [demo.diceroll.web/config-dump-wrapper])
+                       (bract.ring.inducer/apply-middlewares     ; apply Ring middleware
+                         [ring.middleware.params/wrap-params])
+                       (bract.core.inducer/run-context-inducers  ; defined in bract.core
+                         :app/dev-inducers)]
+ :app/cli-inducers    [bract.cli.inducer/parse-args
+                       bract.core.inducer/read-config
+                       bract.core.inducer/set-verbosity
+                       bract.cli.inducer/execute-command]
+ :app/dev-inducers    []
+ :bract.core/launchers      [bract.ring.inducer/start-server]
+ ;;:bract.ring/server-starter bract.ring.server/start-aleph-server
+ :bract.ring/server-starter bract.ring.server/start-http-kit-server
+ ;;:bract.ring/server-starter bract.ring.server/start-immutant-server
+ ;;:bract.ring/server-starter bract.ring.server/start-jetty-server
+ }

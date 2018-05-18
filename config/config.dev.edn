@@ -1,3 +1,1 @@
-{"parent.filenames" ["baseconfig.edn" "bract/ring/devdelta.edn"]
- "dev.inducers"     [;; record the context for dev workflow
-                     bract.core.dev/record-context!]}
+{"parent.filenames" ["baseconfig.edn" "bract/ring/config.dev.edn"]}

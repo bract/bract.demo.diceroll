@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.6.0 / 2018-May-??
+## 0.6.0 / 2018-May-18
 
 - Use Bract 0.6.0
   - Use `bract.core.main` as entrypoint (main class)

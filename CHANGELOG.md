@@ -1,10 +1,9 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.6.0 / 2018-March-??
+## [WIP] 0.6.0 / 2018-May-??
 
 - Use Bract 0.6.0
-  - [TODO] Use the GA version
   - Use `bract.core.main` as entrypoint (main class)
   - Define context entries in `bract-context.edn` and `bract-context.dev.edn`
   - Remove inducer and launcher entries from `baseconfig.edn` and config files

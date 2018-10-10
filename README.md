@@ -15,7 +15,7 @@ You can build the app locally and run it as follows:
 
 ```shell
 $ lein do clean, uberjar
-$ java -jar target/uberjar/demo.diceroll-0.6.0-standalone.jar -vf config/config.edn
+$ java -jar target/uberjar/demo.diceroll-0.6.1-standalone.jar -vf config/config.edn
 ```
 
 Alternatively, you may want to run it as follows in development:

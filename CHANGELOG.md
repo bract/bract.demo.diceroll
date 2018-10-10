@@ -3,7 +3,7 @@
 
 ## [WIP] 0.6.1 / 2018-October-??
 
-- [Todo] Use Bract 0.6.1
+- Use Bract 0.6.1
 
 
 ## 0.6.0 / 2018-May-18

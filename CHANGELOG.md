@@ -7,7 +7,7 @@
 - Use Clojure 1.10.2
 - Use `bract.dev.repl` for REPL support
   - Use port 3001 for nREPL
-  - [Todo] Drop `dev` files
+  - Drop `dev` files
 - Use `bract.core.dev` as main entrypoint in DEV
 
 

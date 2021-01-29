@@ -1,6 +1,16 @@
 # demo.diceroll Change Log
 
 
+## [WIP] 0.6.2 / 2021-January-??
+
+- [Todo] Use Bract 0.6.2
+- [Todo] Use Clojure 1.10.2
+- [Todo] Use `bract.dev.repl` for REPL support
+  - [Todo] Use port 3001 for nREPL
+  - [Todo] Drop `dev` files
+- [Todo] Use `bract.core.dev` as main entrypoint in DEV
+
+
 ## 0.6.1 / 2018-October-10
 
 - Use Bract 0.6.1

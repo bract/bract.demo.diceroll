@@ -51,8 +51,7 @@ The `dev/user.clj` file is loaded when you run `lein repl` where the following m
 
 ## License
 
-Copyright © 2017-2018 Shantanu Kumar (kumar.shantanu@gmail.com, shantanu.kumar@concur.com)
+Copyright © 2017-2021 [Shantanu Kumar](https://github.com/kumarshantanu)
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
-

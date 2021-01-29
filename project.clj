@@ -8,7 +8,7 @@
                 *unchecked-math* :warn-on-boxed}
   :min-lein-version "2.7.1"
   :pedantic?    :warn
-  :dependencies [[org.clojure/clojure "1.10.1"]
+  :dependencies [[org.clojure/clojure "1.10.2"]
                  [bract/bract.cli     "0.6.2-0.1.1-beta2"]
                  [bract/bract.ring    "0.6.2-0.2.0-beta2"]
                  ;; web servers (uncomment any one)

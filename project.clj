@@ -13,9 +13,9 @@
                  [bract/bract.ring    "0.6.2-0.2.0-beta2"]
                  ;; web servers (uncomment any one)
                  ;;[aleph                   "0.4.6" :exclusions [org.clojure/tools.logging]]
-                 [http-kit                "2.3.0"]
+                 [http-kit                "2.5.1"]
                  ;;[org.immutant/immutant   "2.1.10"]
-                 ;;[ring/ring-jetty-adapter "1.6.3"]
+                 ;;[ring/ring-jetty-adapter "1.8.2"]
                  ;; web
                  [ring/ring-core "1.8.2"]]
   :target-path "target/%s"

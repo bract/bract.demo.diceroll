@@ -9,6 +9,7 @@
   - Use port 3001 for nREPL
   - Drop `dev` files
 - Use `bract.core.dev` as main entrypoint in DEV
+- Use ring-core 1.8.2
 
 
 ## 0.6.1 / 2018-October-10

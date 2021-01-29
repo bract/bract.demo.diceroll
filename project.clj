@@ -17,7 +17,7 @@
                  ;;[org.immutant/immutant   "2.1.10"]
                  ;;[ring/ring-jetty-adapter "1.6.3"]
                  ;; web
-                 [ring/ring-core "1.6.3"]]
+                 [ring/ring-core "1.8.2"]]
   :target-path "target/%s"
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler bract.ring.dev/handler

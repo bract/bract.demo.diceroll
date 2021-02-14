@@ -9,8 +9,8 @@
   :min-lein-version "2.7.1"
   :pedantic?    :warn
   :dependencies [[org.clojure/clojure "1.10.2"]
-                 [bract/bract.cli     "0.6.2-0.1.1-alpha4"]
-                 [bract/bract.ring    "0.6.2-0.2.0-alpha4"]
+                 [bract/bract.cli     "0.6.2-0.1.1-beta4"]
+                 [bract/bract.ring    "0.6.2-0.2.0-beta4"]
                  ;; web servers (uncomment any one)
                  ;;[aleph                   "0.4.6" :exclusions [org.clojure/tools.logging]]
                  [http-kit                "2.5.1"]
@@ -24,7 +24,7 @@
          :init    bract.ring.dev/init!
          :port    3000
          :nrepl   {:start? true :port 3001}}
-  :profiles {:dev {:dependencies [[bract/bract.dev "0.6.2-0.2.0-alpha4"]]
+  :profiles {:dev {:dependencies [[bract/bract.dev "0.6.2-0.2.0-beta4"]]
                    :repl-options {:init-ns bract.dev.repl
                                   :port 3001}
                    :main ^:skip-aot bract.core.dev}

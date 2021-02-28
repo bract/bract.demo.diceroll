@@ -13,7 +13,7 @@
   - Clojure 1.10.2
   - ring-core 1.8.2
   - ring-jetty-adapter (commented) 1.8.2
-  - http-kit 2.5.1
+  - http-kit 2.5.3
 - Process CLI args in DEV mode just as main mode
   - Remove `:app/cli-inducers` override in `test/bract-context.dev.edn`
 

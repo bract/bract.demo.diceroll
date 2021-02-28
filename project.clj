@@ -13,7 +13,7 @@
                  [bract/bract.ring    "0.6.2-0.2.0"]
                  ;; web servers (uncomment any one)
                  ;;[aleph                   "0.4.6" :exclusions [org.clojure/tools.logging]]
-                 [http-kit                "2.5.1"]
+                 [http-kit                "2.5.3"]
                  ;;[org.immutant/immutant   "2.1.10"]
                  ;;[ring/ring-jetty-adapter "1.8.2"]
                  ;; web

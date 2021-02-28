@@ -1,7 +1,7 @@
 # demo.diceroll Change Log
 
 
-## [WIP] 0.6.2 / 2021-January-??
+## 0.6.2 / 2021-January-28
 
 - Bract
   - Use Bract 0.6.2

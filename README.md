@@ -15,7 +15,7 @@ You can build the app locally and run it as follows:
 
 ```shell
 $ lein do clean, uberjar
-$ java -jar target/uberjar/demo.diceroll-0.6.1-standalone.jar -vf config/config.edn
+$ java -jar target/uberjar/demo.diceroll-0.6.2-SNAPSHOT-standalone.jar -vf config/config.edn
 ```
 
 Alternatively, you may want to run it as follows in development:
@@ -36,23 +36,21 @@ In your web browser you can visit the following URLs:
 
 ### REPL based development
 
-The `dev/user.clj` file is loaded when you run `lein repl` where the following may be helpful:
+Run `lein do clean, repl` to launch the REPL:
 
 ```clojure
-(go)       ; stop app if running, then reload namespaces and reinit
-(reset)    ; same as (go)
-(start)    ; start the application
-(stop)     ; stop app if running, leaving it still initialized
-(restart)  ; stop app if running, reload namespaces, reinitialize and start up
-(verbose true) ; enable verbose mode
-(config-files "config/config.qa.edn") ; switch config file
+bract.dev.repl=> (help)  ; shows the help screen
 ```
+
+
+### Running tests
+
+Run tests using `lein do clean, test` command.
 
 
 ## License
 
-Copyright © 2017-2018 Shantanu Kumar (kumar.shantanu@gmail.com, shantanu.kumar@concur.com)
+Copyright © 2017-2021 [Shantanu Kumar](https://github.com/kumarshantanu)
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
-
